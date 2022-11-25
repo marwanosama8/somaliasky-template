@@ -2,3 +2,100 @@
 @tailwind components;
 @tailwind utilities;
 
+/* cairo-regular - latin */
+@layer base {
+    @font-face {
+        font-family: 'FF';
+        src: url('./public/fonts/FF Shamel Family Sans One Book.ttf')
+    }
+}
+
+
+body {
+    background-color: #F7F6F8;
+}
+
+.need-bg-color {
+    background-color: rgba(116, 47, 55, 0.76)
+}
+
+.remove-ad-close {
+    width: 40px;
+    height: 36px;
+    border-radius: 0% 21% 0% 32%;
+    background-color: #722F37;
+    position: absolute;
+    top: 134px;
+    right: 210px;
+    text-align: center;
+    line-height: 24px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.remove-ad-close:after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f1f8";
+    display: inline-block;
+    padding-right: 1px;
+    vertical-align: middle;
+    font-weight: 900;
+    padding-bottom: 3px;
+    padding-top: 6px;
+    color: #fff;
+}
+
+.backgound {
+    /* color: rgba(0, 0, 0, 0.59); */
+    background-image: url('../imgs/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 692px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+}
+.opacity {
+    background-color: rgba(0, 0, 0, 0.59);
+    position: absolute;
+    height: 692px;
+    width: 100%;
+    z-index: 0;
+}
+@media (min-width: 1440px) {
+    .backgound {
+        /* color: rgba(0, 0, 0, 0.59); */
+        /* flex-direction: column; */
+        height: 695px;
+
+    }
+  }
+
+@media (max-width: 1025px) {
+    .backgound {
+        /* color: rgba(0, 0, 0, 0.59); */
+        flex-direction: column;
+        height: 800px;
+    }
+    .opacity {
+        background-color: rgba(0, 0, 0, 0.59);
+        height: 800px;
+    }   
+}
+@media (max-width: 425px) {
+    .backgound {
+        /* color: rgba(0, 0, 0, 0.59); */
+        flex-direction: column;
+        height: 816px;
+    }
+    .opacity {
+        background-color: rgba(0, 0, 0, 0.59);
+        height: 816px;
+    }   
+}
+
+.inhert{
+    width: inherit;
+}
